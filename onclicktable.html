@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>On Click Table</title>
+        <style>
+            table{
+                margin: auto;
+                border-collapse: collapse;
+                background-color: lightgray;
+            }
+            tr,td{
+                border: 2px solid ;
+                padding: 4px;
+            }
+            h1{
+                width: 200px;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body style="background-color: grey;">
+        <div class="container-fluid"><h1>
+            List of Cars:
+        </h1>
+        <br>
+        <div style="justify-content: center;display: flex;" ><button id="btn" onclick="disp()">Click me to show table</button></div>
+        <br>
+        <table id="table">
+
+        </table>
+        <script>
+            function disp(){
+            const cars=["BMW","Benz","Audi","Lamborghini"];
+            let txt="<table><tbody>";
+                cars.forEach(myFunc);
+            function myFunc(car){
+                txt+='<tr><td>'+car+'</tr></td>'
+            }
+            txt+='</tbody></table>'
+            document.getElementById("table").innerHTML=txt;
+        }
+        </script>
+        </div>
+    </body>
+</html>
